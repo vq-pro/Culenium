@@ -5,19 +5,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import quebec.virtualite.culenium.page_object.GooglePageObject;
 
-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
-
-@SpringBootTest(webEnvironment = RANDOM_PORT)
+@SpringBootTest()
 @CucumberContextConfiguration
 public class CuleniumSteps
 {
-    @Value("${local.server.port}")
-    int serverPort;
-
     @Autowired
     GooglePageObject googlePage;
 

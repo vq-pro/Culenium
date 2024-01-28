@@ -8,16 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class Application
 {
-    static
-    {
-        log.warn("STARTING...");
-    }
-
-    public Application()
-    {
-        log.warn("STARTED");
-    }
-
     public static void main(final String[] args)
     {
         SpringApplication.run(Application.class, args);

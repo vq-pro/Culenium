@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import quebec.virtualite.culenium.page_object.GooglePageObject;
 
-@SpringBootTest()
+@SpringBootTest
 @CucumberContextConfiguration
 public class CuleniumSteps
 {

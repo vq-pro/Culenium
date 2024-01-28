@@ -1,4 +1,4 @@
-package quebec.virtualite.utils.page_object;
+package quebec.virtualite.culenium.page_object;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import quebec.virtualite.utils.RunnableNoTry;
 
 import java.util.List;
 import java.util.Optional;

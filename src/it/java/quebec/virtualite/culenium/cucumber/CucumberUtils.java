@@ -1,4 +1,4 @@
-package quebec.virtualite.utils;
+package quebec.virtualite.culenium.cucumber;
 
 import io.cucumber.datatable.DataTable;
 

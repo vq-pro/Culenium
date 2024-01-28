@@ -6,6 +6,12 @@ Cucumber + Selenium project.
 
 [Culenium](src/features/Culenium.feature)
 
+
+## Cucumber Reports
+
+[Reports](target/cucumber-reports.html)
+
+
 ## Run Configurations
 
 * Cucumber Scenarios

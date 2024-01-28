@@ -1,4 +1,4 @@
-package quebec.virtualite.utils;
+package quebec.virtualite.culenium.page_object;
 
 @FunctionalInterface
 public interface RunnableNoTry

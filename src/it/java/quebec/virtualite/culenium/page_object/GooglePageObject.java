@@ -2,7 +2,6 @@ package quebec.virtualite.culenium.page_object;
 
 import org.openqa.selenium.By;
 import org.springframework.stereotype.Component;
-import quebec.virtualite.utils.page_object.PageObject;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.openqa.selenium.By.xpath;

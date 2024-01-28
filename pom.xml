@@ -29,11 +29,8 @@
         <maven.surefire.plugin.version>3.1.2</maven.surefire.plugin.version>
         <mockito.version>5.4.0</mockito.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!--Backend-->
-        <flyway.version>9.21.0</flyway.version>
-        <h2.version>2.1.214</h2.version>
-        <rest-assured.version>5.3.1</rest-assured.version>
+        <selenium.version>4.17.0</selenium.version>
+        <spring-security-test.version>4.2.3.RELEASE</spring-security-test.version>
     </properties>
 
     <dependencies>
@@ -71,6 +68,13 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <version>${spring-security-test.version}</version>
+            <scope>test</scope>
+        </dependency>
+
         <!--Cucumber-->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -90,6 +94,21 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-spring</artifactId>
             <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!--Selenium-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>${selenium.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -135,24 +154,6 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
-        </dependency>
-
-        <!--Backend-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-            <version>${flyway.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>${h2.version}</version>
         </dependency>
     </dependencies>
 

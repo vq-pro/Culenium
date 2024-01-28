@@ -4,8 +4,10 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.spring.CucumberContextConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import quebec.virtualite.culenium.page_object.GooglePageObject;
 
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
@@ -13,10 +15,11 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @CucumberContextConfiguration
 public class CuleniumSteps
 {
-    public CuleniumSteps(
-        @Value("${local.server.port}") int serverPort)
-    {
-    }
+    @Value("${local.server.port}")
+    int serverPort;
+
+    @Autowired
+    GooglePageObject googlePage;
 
     @Before
     public void beforeEachScenario()
@@ -24,13 +27,15 @@ public class CuleniumSteps
         // DELETE ALL BD
     }
 
-    @When("^we go to (.*)$")
-    public void goTo(String url)
+    @When("we go to Google.com")
+    public void goToGoogle()
     {
+        googlePage.go();
     }
 
     @Then("we are on Google")
     public void weAreOnGoogle()
     {
+        googlePage.validateOnPage();
     }
 }

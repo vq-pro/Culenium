@@ -8,12 +8,12 @@ Cucumber + Selenium project.
 
 ## Run Configurations
 
-* Service Tests (Cucumber)
+* Cucumber Scenarios
   * VM arguments: -ea
   * Class: CucumberIT
   * Run Unit Tests first
 
-* Service Tests (Cucumber - WIP)
+* Cucumber Scenarios (WIP)
   * VM arguments: -ea -Dcucumber.filter.tags="@WIP"
   * Class: CucumberIT
   * Run Unit Tests first
